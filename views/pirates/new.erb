@@ -1,1 +1,17 @@
-<h1>Make your form here</h1>
+<h2>Enter a new Pirate and TWO Ships right here!</h2>
+<form method="post" action="/pirates">
+  <h3>PIRATE DETAILS</h3>
+  <% Pirate.attribute_symbols.each{ |sym| %>
+    <p><%= format_label(sym) %>: <input type="text" name="pirate[<%= sym.to_s %>]"></p>
+  <% } %>
+
+  <h3>PIRATE'S SHIPS</h3>
+  <% for i in 1..2 do %>
+    <h4>Ship <%= i %></h4>
+    <% Ship.attribute_symbols.each{ |sym| %>
+      <p><%= format_label(sym) %>: <input id="ship_<%= sym.to_s %>_<%= i %>" type="text" name="pirate[ships][][<%= sym.to_s %>]"></p>
+    <% } %>
+  <% end %>
+ <br>
+ <button type="submit" value="submit">Submit</button>
+</form>

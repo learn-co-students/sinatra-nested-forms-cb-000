@@ -1,7 +1,11 @@
-<h1>Display your Pirate here</h1>
+<h1>PIRATE</h1>
+<% Pirate.attribute_symbols.each{ |sym| %>
+  <p><%= format_label(sym) %>: <%= @pirate.send(sym) %></p>
+<% } %>
 
-
-<h2>Display your first ship here</h2>
-
-
-<h2>Display your second ship here</h2>
+<% @pirate.ships.each_with_index{ |ship, i| %>
+  <h2>SHIP <%= i + 1 %></h2>
+  <% Ship.attribute_symbols.each{ |sym| %>
+    <p><%= format_label(sym) %>: <%= @pirate.ships[i].send(sym) %></p>
+  <% } %>
+<% } %>

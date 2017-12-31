@@ -12,7 +12,6 @@ class Ship
   end
 
   def self.all
-    puts @@all
     @@all
   end
 

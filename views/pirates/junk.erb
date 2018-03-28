@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pirate Form</title>
+  </head>
+  <body>
+    <h1>Pirates</h1>
+      
+<form action='/pirates' method="POST">
+  <h2>Pirate Info</h2>
+  <p>
+    <h3>name:</h3>
+    <input id="name" type="text" name="pirate[name]"/>
+  </p>
+
+  <p>
+    <h3>weight:</h3>
+    <input id="weight" type="text" name="pirate[weight]"/>
+  </p>
+
+  <p>
+    <h3>height:</h3>
+    <input id="height" type="text" name="pirate[height]"/>
+  <p>
+
+  <h2>Ships</h2>
+
+  <% @ships.each do |ship| %>
+    <p>name: <%= ship.name %></p>
+    <p>type: <%= ship.type %></p>
+    <p>booty: <%= ship.booty %></p>
+  <% end %>
+  </form>
+
+
+</body>
+</html>

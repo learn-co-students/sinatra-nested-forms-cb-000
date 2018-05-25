@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Pirate and Ships</title>
+ </head>
+ <body>
+   <h1>The Pirate</h1>
+   <h2><%= @pirate.name %></h2>
+   <h2><%= @pirate.height %></h2>
+   <h2><%= @pirate.weight %></h2>
+   <h1>The Ships</h1>
+   <% @ships.each do |ship| %>
+     <h3><%= ship.name %></h3>
+     <h3><%= ship.type %></h3>
+     <h3><%= ship.booty %></h3>
+   <% end %>
+ </body>
+</html>

@@ -5,8 +5,8 @@ class Pirate
 
   def initialize(params)
     @name = params[:name]
-    @type = params[:weight]
-    @booty = params[:height]
+    @weight = params[:weight]
+    @height = params[:height]
     PIRATES << self
   end
 

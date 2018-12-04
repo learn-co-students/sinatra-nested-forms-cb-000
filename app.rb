@@ -22,8 +22,7 @@ module FormsLab
 
       @ships = Ship.all
 
-      return @pirate.name
-      # erb :show
+      erb 'pirates/show'.to_sym
     end
   end
 end

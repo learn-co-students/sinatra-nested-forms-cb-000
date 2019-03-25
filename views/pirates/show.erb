@@ -1,7 +1,15 @@
 <h1>Display your Pirate here</h1>
+<h3>I see a door marked "Private." Is that the door you're talking about?</h3>
 
+  <p>Pirate Name: <%= @pirate.name %><br>
+     Pirate Weight: <%= @pirate.weight %><br>
+     Pirate Height: <%= @pirate.height %></p>
 
-<h2>Display your first ship here</h2>
-
-
-<h2>Display your second ship here</h2>
+  <p>Ships</p>
+  <% @ships.each do |ship| %>
+  <div class="ship">
+    <p>Name: <%= ship.name %></p><br>
+    <p>Type: <%= ship.type %></p><br>
+    <p>Booty: <%= ship.booty %></p><br>
+  </div><br>
+  <% end %>

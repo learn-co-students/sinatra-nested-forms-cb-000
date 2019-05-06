@@ -1,11 +1,14 @@
+require 'rubygems'
+require 'bundler/setup'
+
 source "https://rubygems.org"
 
+gem 'require_all', '2.0.0'
 gem 'sinatra', require: 'sinatra/base'
-gem 'sinatra-reloader', require: false
+gem 'sinatra-reloader'
 gem 'shotgun'
 gem 'pry'
 gem 'tux'
-gem 'require_all'
 
 group :test do
   gem 'rspec'
